@@ -1,0 +1,63 @@
+@mixin max($value1, $value2, $value3, $value4) {
+  color: $value1;
+  font-family: $value2;
+  font-weight: $value3;
+  font-size: $value4;
+}
+
+
+// Media Queries
+@mixin xxl-screen() {
+  @media only screen and (max-width: $xxl-screen) {
+    @content;
+  }
+}
+
+@mixin xl-screen() {
+  @media only screen and (max-width: $xl-screen) {
+    @content;
+  }
+}
+
+@mixin xlg-screen() {
+  @media only screen and (max-width: $xlg-screen) {
+    @content;
+  }
+}
+
+@mixin lg-screen() {
+  @media only screen and (max-width: $lg-screen) {
+    @content;
+  }
+}
+
+@mixin md-screen() {
+  @media only screen and (max-width: $md-screen) {
+    @content;
+  }
+}
+
+@mixin sm-screen() {
+  @media only screen and (max-width: $sm-screen) {
+    @content;
+  }
+}
+
+@mixin xs-screen() {
+  @media only screen and (max-width: $xs-screen) {
+    @content;
+  }
+}
+
+@mixin custom-screen($screenSize) {
+  @media only screen and (max-width: $screenSize) {
+    @content;
+  }
+}
+
+// Mixin for Body
+@mixin body($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}

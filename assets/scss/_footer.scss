@@ -1,0 +1,32 @@
+//  Footer
+.footer {
+    padding: 20px 120px 20px 120px;
+
+    .details {
+
+        p {
+            @include max(#AAA, $font, 700, $font-base);
+        }
+
+        li {
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                @include max(#1451B8, $font, 500, 12px);
+            }
+        }
+    }
+
+    @include md-screen() {
+
+        padding: 10px 50px 20px 50px;
+
+    }
+
+    @include sm-screen() {
+
+        padding: 30px 10px 20px 10px !important;
+
+    }
+}

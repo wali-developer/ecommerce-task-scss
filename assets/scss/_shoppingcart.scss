@@ -1,0 +1,169 @@
+section {
+    .cards {
+        padding: 40px 130px 200px 130px;
+
+        h1 {
+            color: $dark-color;
+            font-family: $font;
+            font-size: 36px;
+            font-weight: 500;
+        }
+
+        .p-1 {
+            color: $dark-color;
+            font-family: $font;
+            font-size: $font-base;
+            font-weight: $f-weight;
+            margin: 20px 0 30px 0;
+        }
+
+        .card {
+            width: 350px;
+            border: none;
+            cursor: pointer;
+            margin-top: 40px;
+            margin-left: -20px;
+
+            .image img {
+                border-radius: 0;
+                width: 100px;
+                height: 60px;
+                object-fit: contain;
+
+            }
+
+            .card-body {
+                padding: 0;
+
+                h5 {
+                    @include max($dark-color, $font, $f-weight, $font-nav);
+                }
+
+                .card-text {
+                    margin-top: -5px;
+                    @include max($dark-color, $font, $f-weight, 14px);
+                }
+
+                h3 {
+                    @include max($dark-color, 'Roboto', 700, 24px);
+                }
+            }
+
+            .trash {
+                display: inline-grid;
+                width: 40px;
+
+                .img-2 {
+                    margin-top: 30px;
+                }
+            }
+
+        }
+
+    }
+
+    .payment {
+        background: $bg-color;
+        padding: 150px 140px;
+
+        .table {
+            td {
+                border: none;
+                padding: 15px;
+                padding-left: 0;
+                @include max($black, $font, $f-weight, $font-base);
+            }
+
+            th {
+                text-align: right;
+                border: none;
+                padding: 7px;
+                padding-right: 0;
+                @include max($black, 'Roboto', $f-weight, 24px);
+            }
+
+            tr:nth-child(2) {
+                border-bottom: 1px solid #CCC;
+            }
+
+            .tr-3 td {
+                padding-top: 20px;
+                font-size: 24px;
+            }
+
+            .tr-3 th {
+                font-size: 24px;
+                font-weight: 500;
+                padding-top: 20px;
+            }
+        }
+    }
+
+    .btn-block {
+        font-family: $font;
+        font-size: $font-base;
+        font-weight: 500;
+        background: #3D81F5;
+        border: 1px solid #3D81F5;
+        border-radius: 4px;
+        outline: 0;
+        padding: 15px 0px;
+    }
+
+    @include xlg-screen() {
+
+        .cards {
+            padding: 40px 120px 200px 120px;
+        }
+
+        .payment {
+            padding: 150px 50px !important;
+        }
+    }
+
+    @media only screen and (max-width: 991px) {
+
+        .cards {
+            padding: 40px 40px 200px 40px !important;
+        }
+    }
+
+    @mixin md-screen() {
+
+        .cards {
+            padding: 40px 50px 30px 50px !important;
+        }
+
+        .payment {
+            padding: 25px 50px !important;
+        }
+    }
+
+    @mixin sm-screen() {
+
+        .cards {
+            padding: 40px 20px 30px 20px !important;
+        }
+
+        .payment {
+            padding: 25px 20px !important;
+        }
+    }
+
+    @include xs-screen() {
+
+        .cards {
+            padding: 40px 15px 30px 15px !important;
+        }
+
+        .card {
+            width: auto !important;
+            height: auto !important;
+        }
+
+        .payment {
+            padding: 20px 20px 50px 20px !important;
+        }
+    }
+
+}
