@@ -1,0 +1,110 @@
+.editproduct-container {
+    margin: 0 auto;
+
+    .menu {
+        background: $bg-color;
+        padding: 40px 60px 800px 60px;
+
+        ul {
+            width: 200px;
+
+            li {
+                padding: 10px;
+                list-style: none;
+
+                a {
+                    cursor: pointer;
+                    text-decoration: none;
+                    @include max(#777, $font, $f-weight, $font-base);
+                }
+
+                img {
+                    padding-right: 20px;
+                }
+            }
+        }
+
+        .ul-2 {
+            margin-left: 50px;
+            margin-top: 10px;
+
+            li {
+                padding: 0;
+            }
+        }
+
+    }
+
+    .products {
+        padding: 40px 150px 120px 100px;
+
+        .p {
+            margin-top: 10px;
+            @include max($dark-color, $font, $f-weight, 20px);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .card {
+            width: 190px;
+            height: 350px;
+            border: none;
+            border-radius: 0;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-left: -15px;
+
+            p {
+                line-height: 21px;
+                @include max($dark-color, $font, $f-weight, $font-base);
+            }
+
+            img {
+                border-radius: 0;
+            }
+
+            .price {
+                @include max($dark-color, 'Roboto', 700, $font-nav);
+            }
+
+            .card-body {
+                padding-left: 0;
+            }
+        }
+    }
+
+    @include xlg-screen() {
+
+        .menu {
+            padding: 10px 20px 700px 40px;
+        }
+
+        .products {
+            padding: 40px 100px 120px 50px;
+
+            .card {
+                width: auto !important;
+                height: auto !important;
+            }
+        }
+    }
+
+    @mixin md-screen() {
+
+        .menu {
+            padding: 40px 40px 30px 40px !important;
+        }
+
+        .products {
+            padding: 20px 40px 120px 40px !important;
+        }
+    }
+
+    @mixin sm-screen() {
+        .products {
+            padding: 20px 5px 40px 20px !important;
+        }
+    }
+}

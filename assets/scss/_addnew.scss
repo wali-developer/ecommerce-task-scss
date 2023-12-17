@@ -1,0 +1,151 @@
+.add-new {
+    font-family: $font;
+    margin: 0 auto;
+
+    .menu {
+        background: $bg-color;
+        padding: 40px 60px 800px 60px;
+
+        ul {
+            width: 200px;
+
+            li {
+                padding: 10px;
+                list-style: none;
+
+                a {
+                    cursor: pointer;
+                    text-decoration: none;
+                    @include max(#777, $font, $f-weight, $font-base);
+                }
+
+                img {
+                    padding-right: 20px;
+                }
+            }
+        }
+
+        .ul-2 {
+            margin-left: 50px;
+            margin-top: 10px;
+
+            li {
+                padding: 0;
+            }
+        }
+
+    }
+
+    .register {
+        padding: 40px 100px;
+
+        h1 {
+            @include max(#000, $font, 500, 36px);
+        }
+
+        form {
+            @include max($dark-color, $font, 500, 12px);
+
+            .form-control {
+                padding: 6px;
+                margin-top: 25px;
+                font-size: 13px;
+            }
+
+            .btn {
+                margin-top: 15px;
+                height: 52px;
+                border-radius: 4px;
+                border: 0px solid #3D81F5;
+                background: #3D81F5;
+                @include max(#fff, $font, 500, $font-base);
+            }
+        }
+    }
+
+    .cards {
+        background: #fff;
+        padding: 114px 0px 0px 20px;
+
+        .card {
+            width: 190px;
+            height: 350px;
+            border: none;
+            border-radius: 0;
+            cursor: pointer;
+            margin-top: 10px;
+
+            .card-body {
+                padding-left: 0;
+
+                p {
+                    line-height: 21px;
+                    @include max($dark-color, $font, $f-weight, $font-base);
+                }
+
+                .price {
+                    @include max($dark-color, 'Roboto', 700, $font-nav);
+                }
+            }
+
+            img {
+                border-radius: 0;
+            }
+        }
+    }
+
+    @include xl-screen() {
+        .menu {
+            padding: 40px 60px 10px 60px;
+        }
+    }
+
+    @mixin xlg-screen() {
+
+        .menu {
+            padding: 40px 0px 250px 30px;
+        }
+
+        .cards {
+            padding: 14px 0px 0px 50px;
+        }
+    }
+
+    @mixin md-screen() {
+
+        .menu {
+            padding: 40px 50px 20px 50px !important;
+
+        }
+
+        .register {
+            padding: 10px 60px 50px 60px !important;
+        }
+    }
+
+    @mixin sm-screen() {
+
+        .menu {
+            padding: 40px 30px 20px 30px !important;
+
+        }
+
+        .register {
+            padding: 10px 40px !important;
+        }
+    }
+
+    @mixin xs-screen() {
+        .register {
+            padding: 20px 15px !important;
+
+            h1 {
+                font-size: 20px !important;
+            }
+        }
+
+        .cards {
+            padding: 14px 15px 0px 15px !important;
+        }
+    }
+}

@@ -1,0 +1,122 @@
+.header {
+    border: 1px solid rgba(0, 0, 0, 0.30);
+    background: #4A5568 !important;
+    padding: 10px 135px;
+
+    .navbar-brand {
+        @include max($bg-color, 'Princess Sofia', $f-weight, 24px);
+
+        &:hover {
+            color: $bg-color !important;
+        }
+
+    }
+
+    .navbar-nav {
+        margin-left: 30px;
+
+        .nav-item {
+
+            .nav-link {
+                @include max(#CCC, $font, 500, $font-nav);
+            }
+
+            .active {
+                color: $white-color !important;
+            }
+        }
+    }
+
+    .navbar-cart .btn {
+        width: 96px;
+        height: 36px;
+        border-radius: 4px;
+        border: 0px solid $orange-color;
+        background: $orange-color;
+        @include max($white-color, $font, 500, $font-nav);
+
+
+        img {
+            object-fit: contain;
+            margin-right: 10px;
+        }
+    }
+
+    // Login form start  
+    .dropdown {
+        .btn-1 {
+            background: transparent;
+            border: none;
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        .dropdown-menu {
+            padding: 15px 25px;
+            width: 350px;
+            background: #4A5568;
+            border: 1px solid #4A5568;
+            border-radius: 0;
+            margin-top: 15px;
+            margin-left: -70px;
+            color: $white-color;
+
+
+            .form-group .btn {
+                height: 52px;
+                color: $white-color;
+                border: 1px solid $orange-color;
+                font-family: $font;
+
+                &:hover {
+                    background: $orange-color;
+                }
+            }
+
+        }
+    }
+
+    // Login form ends 
+}
+
+// Media Quries 
+
+@include lg-screen() {
+
+
+    .navbar {
+        padding: 10px 50px;
+    }
+
+    button.navbar-toggler {
+        background: $orange-color;
+        width: 56px;
+        height: 36px;
+        border: 1px solid $orange-color;
+
+        &:focus {
+            border: 1px solid $orange-color;
+            outline: 0 !important;
+        }
+    }
+
+    .dropdown-menu {
+        margin-top: 40px !important;
+        margin-left: -51px !important;
+    }
+}
+
+
+@include sm-screen() {
+
+    .navbar {
+        padding: 10px 20px !important;
+    }
+
+    .dropdown-menu {
+        width: auto !important;
+        margin-left: -21px !important;
+    }
+}

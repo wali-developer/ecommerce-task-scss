@@ -1,0 +1,235 @@
+.productdetails-section {
+    margin: 0 auto;
+    padding: 40px 130px;
+    font-family: $font;
+
+    p {
+        color: #AAA;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150.4%;
+    }
+
+    .detail {
+        margin-left: -30px;
+
+        .row-2 {
+            .col-2 img {
+                object-fit: contain;
+                width: 60px;
+                height: 68px;
+                cursor: pointer;
+            }
+        }
+
+        .more-detail {
+            h2 {
+                line-height: normal;
+                @include max($dark-color, $font, 700, 28px);
+            }
+
+            p {
+                line-height: 150.4%;
+                margin-top: 15px;
+                @include max(#666, $font, 400, $font-base);
+            }
+
+            h1 {
+                margin-top: 35px;
+                @include max($dark-color, 'Roboto', 700, 30px);
+            }
+
+            .image {
+                padding: 5px 15px;
+                border-radius: 4px;
+                border: 1px solid #1451B8;
+                object-fit: contain;
+                margin-top: 15px;
+                cursor: pointer;
+            }
+
+            .btn {
+                padding: 11px 35px;
+                font-size: 16px;
+                font-weight: 500;
+                border-radius: 4px;
+                background: #3D81F5;
+                margin-left: 10px;
+                margin-top: 15px;
+            }
+        }
+    }
+
+    @include xlg-screen() {
+
+        .row-2 {
+            .col-2 img {
+                width: auto !important;
+                height: auto !important;
+            }
+        }
+    }
+
+    @include xlg-screen() {
+
+        .row-2 {
+            .col-2 {
+                display: none;
+            }
+        }
+
+        .more-detail {
+            margin-left: 50px;
+        }
+    }
+
+    @include md-screen() {
+
+        padding: 30px 50px;
+
+        .more-detail {
+            margin-top: 20px;
+            margin-left: 15px;
+        }
+    }
+
+    @include sm-screen() {
+
+        padding: 30px 20px;
+
+        .more-detail {
+            margin-left: 15px;
+        }
+    }
+
+    @include xs-screen() {
+
+        padding: 30px 0px 30px 15px;
+
+        .carousel {
+            width: auto !important;
+
+            .img {
+                width: 100%;
+            }
+        }
+
+        .more-detail h2 {
+            margin-top: 15px;
+        }
+    }
+}
+
+.productdetail-container {
+    padding: 20px 130px 0px 130px;
+    margin: 0 auto;
+    background: $bg-color;
+    font-family: $font;
+
+    .p {
+        margin-top: 10px;
+        @include max($dark-color, $font, $f-weight, 20px);
+    }
+
+    .row-3 {
+
+        a {
+            text-decoration: none;
+
+            .card {
+                width: 190px;
+                height: 350px;
+                border: none;
+                border-radius: 0;
+                cursor: pointer;
+                margin-top: 10px;
+                margin-left: -15px;
+
+                .card-body {
+                    background: $bg-color;
+                }
+
+                p {
+                    line-height: 21px;
+                    @include max($dark-color, $font, $f-weight, $font-base);
+                }
+
+                img {
+                    border-radius: 0;
+                }
+
+                .price {
+                    @include max($dark-color, 'Roboto', 700, $font-nav);
+                }
+            }
+
+            .card-2 {
+                display: -webkit-inline-box;
+                height: 200px;
+                padding: 70px 40px;
+                border-radius: 4px;
+                border: 0px solid $dark-color;
+                background: $dark-color;
+
+                p {
+                    @include max($white-color, $font, 500, $font-base);
+                }
+
+                img {
+                    object-fit: contain;
+                    margin-left: -23px;
+                    margin-top: 12px;
+                }
+            }
+        }
+    }
+
+    @include xlg-screen() {
+        .card {
+            width: auto !important;
+            height: auto !important;
+        }
+
+        .card-2 {
+            width: auto !important;
+            height: auto !important;
+            padding: 70px 50px !important;
+        }
+    }
+
+    @include md-screen() {
+
+        padding: 20px 50px 0px 50px;
+
+        .card-2 {
+            padding: 70px 40px !important;
+        }
+    }
+
+    @include sm-screen() {
+
+        padding: 20px 20px 0px 20px;
+
+        .card-2 {
+            padding: 45px 20px !important;
+        }
+    }
+
+    @include xs-screen() {
+
+        padding: 20px 15px 0px 15px;
+
+        .card {
+            width: auto;
+        }
+
+        .card-2 {
+            padding: 57px 30px !important;
+
+            p {
+                font-size: 13px !important;
+            }
+        }
+    }
+}
